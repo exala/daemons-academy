@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 4%);
+  --foreground: hsl(0, 0%, 100%);
+  --card: hsl(0, 0%, 6.5%);
+  --card-foreground: hsl(0, 0%, 100%);
+  --popover: hsl(0, 0%, 4%);
+  --popover-foreground: hsl(0, 0%, 100%);
+  --primary: hsl(120, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(0, 0%, 6.5%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(0, 0%, 6.5%);
+  --muted-foreground: hsl(0, 0%, 65%);
+  --accent: hsl(120, 100%, 58%);
+  --accent-foreground: hsl(0, 0%, 0%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(120, 100%, 50%, 0.3);
+  --input: hsl(0, 0%, 0%, 0.5);
+  --ring: hsl(120, 100%, 50%);
+  --chart-1: hsl(120, 100%, 50%);
+  --chart-2: hsl(159.7826, 100%, 36.0784%);
+  --chart-3: hsl(42.0290, 92.8251%, 56.2745%);
+  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
+  --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
+  --sidebar: hsl(0, 0%, 6.5%);
+  --sidebar-foreground: hsl(0, 0%, 100%);
+  --sidebar-primary: hsl(120, 100%, 50%);
+  --sidebar-primary-foreground: hsl(0, 0%, 0%);
+  --sidebar-accent: hsl(0, 0%, 6.5%);
+  --sidebar-accent-foreground: hsl(120, 100%, 50%);
+  --sidebar-border: hsl(120, 100%, 50%, 0.3);
+  --sidebar-ring: hsl(120, 100%, 50%);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 0.5rem;
+  --cyber-green: hsl(120, 100%, 50%);
+  --cyber-green-bright: hsl(120, 100%, 58%);
+  --cyber-dark: hsl(0, 0%, 4%);
+  --cyber-gray: hsl(0, 0%, 6.5%);
+  --cyber-green-dark: hsl(120, 25%, 15%);
+}
+
+.dark {
+  --background: hsl(0, 0%, 4%);
+  --foreground: hsl(0, 0%, 100%);
+  --card: hsl(0, 0%, 6.5%);
+  --card-foreground: hsl(0, 0%, 100%);
+  --popover: hsl(0, 0%, 4%);
+  --popover-foreground: hsl(0, 0%, 100%);
+  --primary: hsl(120, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(0, 0%, 6.5%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(0, 0%, 6.5%);
+  --muted-foreground: hsl(0, 0%, 65%);
+  --accent: hsl(120, 100%, 58%);
+  --accent-foreground: hsl(0, 0%, 0%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(120, 100%, 50%, 0.3);
+  --input: hsl(0, 0%, 0%, 0.5);
+  --ring: hsl(120, 100%, 50%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Glitch Effect */
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  10% { transform: translate(-2px, 1px); }
+  20% { transform: translate(-1px, -1px); }
+  30% { transform: translate(1px, 1px); }
+  40% { transform: translate(-1px, -1px); }
+  50% { transform: translate(1px, -2px); }
+  60% { transform: translate(-1px, 1px); }
+  70% { transform: translate(1px, 1px); }
+  80% { transform: translate(-1px, -1px); }
+  90% { transform: translate(1px, 2px); }
+}
+
+@keyframes matrix {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 0, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(0, 255, 0, 0.6); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.glitch-text {
+  position: relative;
+  color: var(--cyber-green);
+  font-weight: bold;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-text::before {
+  animation: glitch 2s infinite;
+  color: #ff0000;
+  z-index: -1;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch-text::after {
+  animation: glitch 3s infinite;
+  color: #0000ff;
+  z-index: -2;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.terminal-box {
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid var(--cyber-green);
+  position: relative;
+}
+
+.terminal-box::before {
+  content: '>';
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: var(--cyber-green);
+  font-family: var(--font-mono);
+}
+
+.matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.matrix-char {
+  position: absolute;
+  color: var(--cyber-green);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  animation: matrix 20s linear infinite;
+  opacity: 0.7;
+}
+
+.animate-glitch {
+  animation: glitch 2s infinite;
+}
+
+.animate-matrix {
+  animation: matrix 20s linear infinite;
+}
+
+.animate-pulse-green {
+  animation: pulse-green 2s infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.scroll-indicator {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-dot.active {
+  background: var(--cyber-green);
+  box-shadow: 0 0 10px var(--cyber-green);
+}
+
+/* Custom utilities */
+.text-cyber-green {
+  color: var(--cyber-green);
+}
+
+.text-cyber-green-bright {
+  color: var(--cyber-green-bright);
+}
+
+.bg-cyber-dark {
+  background-color: var(--cyber-dark);
+}
+
+.bg-cyber-gray {
+  background-color: var(--cyber-gray);
+}
+
+.bg-cyber-green-dark {
+  background-color: var(--cyber-green-dark);
+}
+
+.border-cyber-green {
+  border-color: var(--cyber-green);
+}
+
+.border-cyber-green-bright {
+  border-color: var(--cyber-green-bright);
+}
