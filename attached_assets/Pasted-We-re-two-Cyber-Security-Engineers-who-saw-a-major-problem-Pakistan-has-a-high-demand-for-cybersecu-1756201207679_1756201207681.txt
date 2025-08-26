@@ -1,0 +1,15 @@
+We're two Cyber Security Engineers who saw a major problem: Pakistan has a high demand for cybersecurity experts, but a shortage of people with the right practical skills. Traditional education often focuses on theory and certifications, not the real-world, hands-on experience you need to get a job done. We're here to change that.At Daemons Academy, you'll learn from the best. Our instructors aren't just teachers; they're active industry experts—cybersecurity engineers who are in the field right now and are really good at teaching and have experience in training others. You'll get a practical education that goes beyond memorization, giving you the skills the industry truly requires.
+We've taught online before, but we're launching our first physical academy in Lahore because we know that nothing beats the quality and experience of face-to-face learning. Since our expert instructors work full-time during the week, our classes will be held on weekends (Saturdays and Sundays).
+Starting from September 2025 (exact date to be decided yet). This intensive 4- to 5-month course in Offensive Security and Penetration Testing costs a single, one-time payment of PKR 90,000 or you can also pay as you go through the modules of the course. There are total 5 modules:
+1. Pre-Security (PKR 20,000)
+2. Reconnaissance and Informtion Gathering (PKR 20,000)
+3. Exploitation (PKR 20,000)
+4. Privilege Escalation, Pivoting and Lateral Movement (PKR 20,000)
+5. Active Directory Penetest (PKR 20,000)
+This fee reflects the high-quality, in-person training and dedicated resources we provide to ensure you get the best possible education. The course duration is an estimate, but our commitment to quality is not—we'll never compromise on your learning.
+To earn your certificate of completion, you must pass a final exam. This won't be a typical multiple-choice or Q&A test. Staying true to our hands-on philosophy, it will be a practical hacking exam where you must successfully compromise several systems. This ensures that you've not only learned the skills but can also apply them effectively.  
+
+
+Pre-requisites for this course:
+A Laptop that you will bring with you during the classes with at leastA 4th Gen or above Processor8 Gigs of RAM or aboveAt least 150 Gigabytes of free storage.Learning attitude and motivation.Ability to think outiste the box to solve problems. (Could be developed with time during the course)Most importantly, curiosity about how computers actually work.
+For further quries, feel free to reach out to us on WhatsApp:+923006212226Daniyal Ahmed
