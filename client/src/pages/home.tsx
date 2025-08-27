@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import MatrixBackground from "@/components/matrix-background";
 import ScrollIndicator from "@/components/scroll-indicator";
-import GlitchText from "@/components/glitch-text";
+
 import TerminalBox from "@/components/terminal-box";
 import ContactForm from "@/components/contact-form";
 import { Button } from "@/components/ui/button";
@@ -64,10 +64,8 @@ export default function Home() {
       <section id="home" className="min-h-screen flex items-center justify-center relative pt-20">
         <div className="container mx-auto px-6 text-center">
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-bold font-mono mb-4">
-              <GlitchText dataText="DAEMONS" className="text-6xl md:text-8xl font-bold font-mono">
-                DAEMONS
-              </GlitchText>
+            <h1 className="text-6xl md:text-8xl font-bold font-mono mb-4 text-cyber-green" data-testid="text-daemons">
+              DAEMONS
             </h1>
             <h2 className="text-4xl md:text-6xl font-bold font-mono text-cyber-green mb-6" data-testid="text-academy">
               ACADEMY

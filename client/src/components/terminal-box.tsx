@@ -4,9 +4,10 @@ interface TerminalBoxProps {
   children: React.ReactNode;
   className?: string;
   animate?: boolean;
+  style?: React.CSSProperties;
 }
 
-export default function TerminalBox({ children, className, animate = false }: TerminalBoxProps) {
+export default function TerminalBox({ children, className, animate = false, style }: TerminalBoxProps) {
   return (
     <div 
       className={cn(
@@ -14,6 +15,7 @@ export default function TerminalBox({ children, className, animate = false }: Te
         animate && "animate-pulse-green",
         className
       )}
+      style={style}
     >
       {children}
     </div>
