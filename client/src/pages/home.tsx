@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import MatrixBackground from "@/components/matrix-background";
 import ScrollIndicator from "@/components/scroll-indicator";
 
@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 
 export default function Home() {
   const { toast } = useToast();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const copyToClipboard = async (text: string) => {
     try {
@@ -32,6 +33,10 @@ export default function Home() {
     window.open(whatsappUrl, '_blank');
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <div className="bg-cyber-dark text-white font-sans overflow-x-hidden">
       <MatrixBackground />
@@ -52,11 +57,19 @@ export default function Home() {
               <a href="#contact" className="hover:text-cyber-green transition-colors duration-300 font-mono" data-testid="nav-contact">./contact</a>
             </div>
             <div className="md:hidden">
-              <button className="text-cyber-green text-2xl" data-testid="mobile-menu-button">
-                <i className="fas fa-bars"></i>
+              <button className="text-cyber-green text-2xl" data-testid="mobile-menu-button" onClick={toggleMobileMenu}>
+                <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
               </button>
             </div>
           </div>
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden mt-4 space-y-4 font-mono">
+              <a href="#home" className="block hover:text-cyber-green transition-colors duration-300" data-testid="nav-home-mobile">./home</a>
+              <a href="#about" className="block hover:text-cyber-green transition-colors duration-300" data-testid="nav-about-mobile">./about</a>
+              <a href="#contact" className="block hover:text-cyber-green transition-colors duration-300" data-testid="nav-contact-mobile">./contact</a>
+            </div>
+          )}
         </div>
       </nav>
 
@@ -74,7 +87,7 @@ export default function Home() {
               &gt; Daemonstrating Cyber Security_
             </p>
           </div>
-          
+
           <TerminalBox className="p-8 max-w-4xl mx-auto mb-8" animate>
             <div className="pl-8">
               <p className="font-mono text-lg mb-4 text-green-300">
@@ -287,7 +300,7 @@ export default function Home() {
             <TerminalBox className="p-8">
               <div className="pl-8">
                 <h3 className="font-mono text-2xl text-cyber-green mb-8">$ cat contact_info.txt</h3>
-                
+
                 <div className="space-y-6">
                   <div className="border-b border-cyber-green/30 pb-6">
                     <h4 className="font-mono text-lg text-cyber-green-bright mb-4">Primary Contact:</h4>
