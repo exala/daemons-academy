@@ -87,6 +87,11 @@ export default function Home() {
               &gt; Daemonstrating Cyber Security_
             </p>
           </div>
+          <div className="mb-8">
+            <a href="/enroll" className="bg-cyber-green border border-cyber-green px-8 py-4 font-mono text-white hover:bg-cyber-green hover:text-white/80 transition-all duration-300">
+              ENROLL NOW
+            </a>
+          </div>
 
           <TerminalBox className="p-8 max-w-4xl mx-auto mb-8" animate>
             <div className="pl-8">
@@ -254,6 +259,12 @@ export default function Home() {
                 </div>
               </TerminalBox>
             </div>
+          </div>
+
+          <div className="mb-12 text-center">
+            <a href="/enroll" className="inline-block bg-cyber-green/20 border border-cyber-green px-8 py-4 font-mono text-cyber-green hover:bg-cyber-green hover:text-black transition-all duration-300 animate-pulse-green" data-testid="link-explore-course">
+              $ ./initialize_enrollment.sh
+            </a>
           </div>
 
           {/* Prerequisites */}
