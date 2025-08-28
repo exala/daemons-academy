@@ -103,33 +103,34 @@ export default function Home() {
             </div>
           </TerminalBox>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <TerminalBox className="p-6 hover:border-cyber-green-bright transition-all duration-300 animate-float">
+          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {/* Disabling the offensive security box for now */}
+            {/* <TerminalBox className="p-6 hover:border-cyber-green-bright transition-all duration-300 animate-float">
               <div className="pl-6">
                 <i className="fas fa-shield-halved text-3xl text-cyber-green mb-4"></i>
                 <h3 className="font-mono text-xl mb-2" data-testid="text-offensive-security">Offensive Security</h3>
                 <p className="text-gray-300">Real-world penetration testing skills</p>
               </div>
-            </TerminalBox>
+            </TerminalBox> */}
             <TerminalBox className="p-6 hover:border-cyber-green-bright transition-all duration-300 animate-float" style={{animationDelay: '0.5s'}}>
               <div className="pl-6">
                 <i className="fas fa-users-gear text-3xl text-cyber-green mb-4"></i>
                 <h3 className="font-mono text-xl mb-2" data-testid="text-expert-instructors">Expert Instructors</h3>
-                <p className="text-gray-300">Active industry professionals</p>
+                <p className="text-gray-300">Active Industry Professionals</p>
               </div>
             </TerminalBox>
             <TerminalBox className="p-6 hover:border-cyber-green-bright transition-all duration-300 animate-float" style={{animationDelay: '1s'}}>
               <div className="pl-6">
                 <i className="fas fa-certificate text-3xl text-cyber-green mb-4"></i>
-                <h3 className="font-mono text-xl mb-2" data-testid="text-practical-exam">Practical Exam</h3>
-                <p className="text-gray-300">Hands-on hacking certification</p>
+                <h3 className="font-mono text-xl mb-2" data-testid="text-practical-exam">Practical Exams</h3>
+                <p className="text-gray-300">Prove Your Skills to Others with Practical Exam Certifications</p>
               </div>
             </TerminalBox>
           </div>
 
           <div className="mt-12">
             <a href="#about" className="inline-block bg-cyber-green/20 border border-cyber-green px-8 py-4 font-mono text-cyber-green hover:bg-cyber-green hover:text-black transition-all duration-300 animate-pulse-green" data-testid="link-explore-course">
-              $ ./explore_course.sh
+              $ ./explore_courses.sh
             </a>
           </div>
         </div>
@@ -140,9 +141,12 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold font-mono mb-4" data-testid="heading-course-details">
-              <span className="text-cyber-green">[</span>
-              Course Details
-              <span className="text-cyber-green">]</span>
+              <span className="text-cyber-green">#&nbsp;</span>
+              Our Courses
+              <p><br></br>
+              <h3 className="text-3xl font-bold font-mono text-center mb-12">
+                <span className="text-cyber-green">&gt;&nbsp;</span>Offensive Security and Penetration Testing
+              </h3></p>
             </h2>
             <p className="text-xl font-mono text-cyber-green-bright">
               &gt; 4-5 Month Intensive Training Program_
@@ -155,12 +159,12 @@ export default function Home() {
               <div className="pl-8">
                 <h3 className="font-mono text-2xl text-cyber-green mb-6">$ cat course_info.txt</h3>
                 <div className="space-y-4 text-gray-300">
-                  <p><span className="text-cyber-green">Duration:</span> 4-5 months intensive</p>
+                  <p><span className="text-cyber-green">Duration:</span> 4-5 Months Intensive</p>
                   <p><span className="text-cyber-green">Schedule:</span> Weekends (Sat & Sun)</p>
                   <p><span className="text-cyber-green">Location:</span> Lahore, Pakistan</p>
                   <p><span className="text-cyber-green">Start Date:</span> September 2025</p>
-                  <p><span className="text-cyber-green">Format:</span> In-person training</p>
-                  <p><span className="text-cyber-green">Certification:</span> Practical hacking exam</p>
+                  <p><span className="text-cyber-green">Format:</span> In-Person Training</p>
+                  <p><span className="text-cyber-green">Certification:</span> Practical Hacking Exam</p>
                 </div>
               </div>
             </TerminalBox>
@@ -187,7 +191,7 @@ export default function Home() {
           {/* Course Modules */}
           <div className="mb-16">
             <h3 className="text-3xl font-bold font-mono text-center mb-12">
-              <span className="text-cyber-green">[</span> Course Modules <span className="text-cyber-green">]</span>
+              <span className="text-cyber-green">#&nbsp;</span>Course Modules <span className="text-cyber-green"></span>
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Module 1 */}
@@ -262,17 +266,17 @@ export default function Home() {
                   <ul className="space-y-2 text-gray-300">
                     <li>• 4th Gen+ Processor</li>
                     <li>• 8GB+ RAM</li>
-                    <li>• 150GB+ free storage</li>
-                    <li>• Personal laptop required</li>
+                    <li>• 150GB+ Free Storage</li>
+                    <li>• Personal Laptop</li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-mono text-lg text-cyber-green-bright mb-4" data-testid="heading-mindset-requirements">Mindset Requirements:</h4>
                   <ul className="space-y-2 text-gray-300">
-                    <li>• Learning attitude</li>
-                    <li>• Problem-solving mindset</li>
-                    <li>• Computer curiosity</li>
-                    <li>• Motivation to excel</li>
+                    <li>• Learning Attitude</li>
+                    <li>• Problem-Solving Mindset</li>
+                    <li>• Computer Curiosity</li>
+                    <li>• Motivation to Excel</li>
                   </ul>
                 </div>
               </div>
@@ -286,9 +290,9 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold font-mono mb-4" data-testid="heading-contact">
-              <span className="text-cyber-green">[</span>
+              <span className="text-cyber-green">#&nbsp;</span>
               Initialize Contact
-              <span className="text-cyber-green">]</span>
+              <span className="text-cyber-green"></span>
             </h2>
             <p className="text-xl font-mono text-cyber-green-bright">
               &gt; Ready to start your cybersecurity journey?_
